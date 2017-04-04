@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-I.
-DEPS = secondOrder.h
-OBJ = secondOrder.o main.o
+DEPS =  secondOrder.h firstOrder.h
+OBJ =  secondOrder.o firstOrder.o main.o
 
 %.o: %.c $(DEPS)
 	$(CC) -g -c -o $@ $< $(CFLAGS)

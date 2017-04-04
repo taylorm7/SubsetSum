@@ -1,5 +1,5 @@
-#ifndef MATRIX_H_
-#define MATRIX_H_
+#ifndef SECOND_H_
+#define SECOND_H_
 
 
 void matrix(int * array, int length);

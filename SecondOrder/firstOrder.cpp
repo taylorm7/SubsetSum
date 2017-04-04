@@ -1,3 +1,16 @@
+#include "firstOrder.h"
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <new>
+#include <sstream>
+
+using namespace std;
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <new>
@@ -6,7 +19,6 @@
 #include "firstOrder.h"
 #include "secondOrder.h"
 
-/*
 //#define N 10
 
 //#define printInSum
@@ -16,6 +28,18 @@
 //#define printSavedSums
 //#define printCycles
 
+
+First :: First(int * a, int l ) 
+  : N(l)
+{}
+
+int First::getLength()
+{
+
+	return N;
+}
+
+/*
 int N;
 
 //int sums [1 << N];
@@ -34,7 +58,7 @@ int cycle_iteration = 0;
 int cycle_sums = 0;
 //int iteration = N;
 int iteration;
-
+*/
 void printArray(int * array, int length)
 {
         int i;
@@ -46,7 +70,7 @@ void printArray(int * array, int length)
         printf("\n");
 }
 
-void printArrayComma(int * array, int length)
+void First::printArrayComma(int * array, int length)
 {
 	
 	//if(iteration + length > N)
@@ -86,7 +110,7 @@ void printArrayComma(int * array, int length)
 
 
 
-int inSums(int t)
+int First::inSums(int t)
 {
 	int i;
 	for(i = 0; i < totalSums; i++)
@@ -106,7 +130,7 @@ int inSums(int t)
 	return 1;
 }
 
-int fillSums(int * a, int length)
+int First::fillSums(int * a, int length)
 {
 	int i = 0;
 	int j = 0;
@@ -139,12 +163,11 @@ int fillSums(int * a, int length)
 
 
 // Program to print all combination of size r in an array of size n
-void combinationUtil(int arr[], int data[], int start, int end, 
-                     int index, int r);
+//void combinationUtil(int arr[], int data[], int start, int end, int index, int r);
  
 // The main function that prints all combinations of size r
 // in arr[] of size n. This function mainly uses combinationUtil()
-void printCombination(int arr[], int n, int r)
+void First::printCombination(int arr[], int n, int r)
 {
     // A temporary array to store all combination one by one
     int data[r];
@@ -153,12 +176,12 @@ void printCombination(int arr[], int n, int r)
     combinationUtil(arr, data, 0, n-1, 0, r);
 }
  
-// arr[]  ---> Input Array
-//   data[] ---> Temporary array to store current combination
-//   start & end ---> Staring and Ending indexes in arr[]
-//   index  ---> Current index in data[]
-//   r ---> Size of a combination to be printed 
-void combinationUtil(int arr[], int data[], int start, int end,
+/* arr[]  ---> Input Array
+   data[] ---> Temporary array to store current combination
+   start & end ---> Staring and Ending indexes in arr[]
+   index  ---> Current index in data[]
+   r ---> Size of a combination to be printed */
+void First::combinationUtil(int arr[], int data[], int start, int end,
                      int index, int r)
 {
     // Current combination is ready to be printed, print it
@@ -208,56 +231,43 @@ void combinationUtil(int arr[], int data[], int start, int end,
     }
 }
  
-*/
+// Driver program to test above functions
 
-void makeArray(int * array, int length)
+void First::init()
 {
-	int i = 0;
-	int val = 1;
-	for(i; i < length; i++)
-	{
-		array[i] = val << i; 
-	}
+
+        runningSums = 0;
+        averageSums = 0;
+        savedPerN = 0;
+        perN = 0;
+
+        reachedAverage = false;
+
+        cycle = 0;
+        cycle_iteration = 0;
+        cycle_sums = 0;
+        iteration;
+
 }
 
 
-int main(int argc, char *argv[])
+void First::line(int * array, int length)
 {
-	int N;
-    	if (argc >= 2)
-    	{
-        	std::istringstream iss( argv[1] );
-        	int val;
-
-        	if (iss >> val)
-        	{
-            		// Conversion successful
-			N = val;
-        	}
-    	}
-	else
-	{
-		N = 6;
-	}
-
+	N = length;
 	
-	int * sums = new int [1 << N];
-	//iteration = N;
-	//totalSums = 1 << N;
+	sums = new int [1 << N];
+	iteration = N;
+	totalSums = 1 << N;
 
 	printf("N:%d sums length:%d\n", N, 2<<N);
 
 	int arr[N];
 
-	makeArray(arr, N);
+	//makeArray(arr);
 
 	printArray(arr,N);
 	printf("\n");
 
-	matrix(arr, N);
-	
-	//line(arr, N);
-	/*
 	int i;
 	for(i = 0; i < N ; i+=1)
 	{	
@@ -283,7 +293,6 @@ int main(int argc, char *argv[])
 
 	printf("\n");
 	printf("\n");
-	*/
 
 	delete[] sums;
 }

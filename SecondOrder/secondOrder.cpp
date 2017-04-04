@@ -1,4 +1,5 @@
 #include "secondOrder.h"
+#include "firstOrder.h"
 #include <vector>
 #include <stdio.h>
 #include <iostream>
@@ -52,45 +53,33 @@ void matrix(int * array, int length)
         	}
     	}
 
-
+	
 
 	printMatrix(m, length);
 	
+	int * lineArray = new int [length + 1];
 
-	std::vector< std::vector<int> > a;
 
+        for (int i = 0; i < length; ++i)
+        {
+                for (int j = 0; j < length; ++j)
+                {
+			if(i ==0)
+			{
+				lineArray[j] = m[i][j];
+			}
+		}
+	}
+	//line(lineArray , length);
 
+	First f1(lineArray, length);
+
+	cout << f1.getLength() << endl;
+	
+	delete [] lineArray;
 
 	for (int i = 0; i < rows; ++i)
     		delete [] m[i];
 	delete [] m;
 
-	//m * n is the size of the matrix
-/*
-    	int m = length, n = length;
-    	//Grow rows by m
-    	a.resize(m);
-    	for(int i = 0 ; i < m ; ++i)
-    	{
-        	//Grow Columns by n
-        	a[i].resize(n);
-    	}
-    	//Now you have matrix m*n with default values
-
-    	//you can use the Matrix, now
-    	a[1][0]=1;
-    	a[1][1]=2;
-    	a[1][2]=3;
-    	a[1][3]=4;
-
-	//OR
-	for(i = 0 ; i < m ; ++i)
-	{
-    		for(int j = 0 ; j < n ; ++j)
-    		{      //modify matrix
-        	int x = a[i][j];
-    		}
-
-	}
-*/
 }
