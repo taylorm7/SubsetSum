@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <iomanip>
+#include <algorithm>
+#include <iterator>
 
 using namespace std;
 
@@ -24,7 +26,23 @@ void printMatrix(int ** mat, int length)
 
 void nonDouble(int * array, int length)
 {
+	
+	int * dest = new int[length];
 
+	std::copy(array, array + length, dest);
+	printArray(array, length);
+
+	int* end = array + length;
+	std::sort(dest, end);
+	//bool containsDuplicate = (std::unique(dest, end) != end);
+	bool containsDuplicate = true;
+	if(containsDuplicate)
+	{
+		cout << "double!" << endl;
+		printArray(array, length);
+	}
+	
+	delete [] dest;
 }
 
 void matrix(int * array, int length)
@@ -74,12 +92,14 @@ void matrix(int * array, int length)
         {
                 for (int j = 0; j < length; ++j)
                 {
-			lineArray[j] = m[j][i];
+			//lineArray[j] = m[j][i];
+			if(i==j)
+				lineArray[j] = m[j][i];
 		}
-		
-		f1.line(lineArray, length);
+		//f1.line(lineArray, length);
 	}
 	
+	nonDouble(lineArray, length);	
 	delete [] lineArray;
 
 	for (int i = 0; i < rows; ++i)
