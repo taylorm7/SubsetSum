@@ -21,6 +21,12 @@ void printMatrix(int ** mat, int length)
     }
 }
 
+
+void nonDouble(int * array, int length)
+{
+
+}
+
 void matrix(int * array, int length)
 {
 
@@ -52,29 +58,27 @@ void matrix(int * array, int length)
 			}
         	}
     	}
-
-	
-
 	printMatrix(m, length);
+
 	
 	int * lineArray = new int [length + 1];
 
+
+
+	First f1(lineArray, length);
+	f1.init();
+
+	f1.line(array, length);
 
         for (int i = 0; i < length; ++i)
         {
                 for (int j = 0; j < length; ++j)
                 {
-			if(i ==0)
-			{
-				lineArray[j] = m[i][j];
-			}
+			lineArray[j] = m[j][i];
 		}
+		
+		f1.line(lineArray, length);
 	}
-	//line(lineArray , length);
-
-	First f1(lineArray, length);
-	f1.init();
-	f1.line(lineArray, length);
 	
 	delete [] lineArray;
 

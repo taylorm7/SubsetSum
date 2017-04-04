@@ -24,8 +24,8 @@ using namespace std;
 //#define printInSum
 //#define printFillSums
 //#define printRepeat
-//#define printArrays
-//#define printSavedSums
+#define printArrays
+#define printSavedSums
 //#define printCycles
 
 
@@ -259,20 +259,20 @@ void First::line(int * array, int length)
 	iteration = N;
 	totalSums = 1 << N;
 
-	printf("N:%d sums length:%d\n", N, 2<<N);
+	//printf("N:%d sums length:%d\n", N, 2<<N);
 
 
 	//makeArray(arr);
 
-	printArray(array,N);
-	printf("\n");
+	//printArray(array,N);
+	//printf("\n");
 
-	int i;
-	for(i = 0; i < N ; i+=1)
+	int i=0;
+	//for(i = 0; i < N ; i+=1)
 	{	
 		printCombination(array, N, N-i);
 		#ifdef printArrays
-		printf("\n");
+		//printf("\n");
 		#endif
 
 		#ifdef printSavedSums
@@ -283,7 +283,7 @@ void First::line(int * array, int length)
 		#endif
 	}
 	
-	printf("\n");
+	//printf("\n");
 	
 	printf("Cycles:%d Cycle Iteration:%d \n", cycle, cycle_iteration);
 	#ifdef printArrays
