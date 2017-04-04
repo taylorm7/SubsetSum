@@ -261,17 +261,16 @@ void First::line(int * array, int length)
 
 	printf("N:%d sums length:%d\n", N, 2<<N);
 
-	int arr[N];
 
 	//makeArray(arr);
 
-	printArray(arr,N);
+	printArray(array,N);
 	printf("\n");
 
 	int i;
 	for(i = 0; i < N ; i+=1)
 	{	
-		printCombination(arr, N, N-i);
+		printCombination(array, N, N-i);
 		#ifdef printArrays
 		printf("\n");
 		#endif

@@ -73,8 +73,8 @@ void matrix(int * array, int length)
 	//line(lineArray , length);
 
 	First f1(lineArray, length);
-
-	cout << f1.getLength() << endl;
+	f1.init();
+	f1.line(lineArray, length);
 	
 	delete [] lineArray;
 
