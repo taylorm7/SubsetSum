@@ -30,6 +30,7 @@ class First
 
 	int getLength();
 	void init();
+	void del();
 	
 
 	void printArrayComma(int * array, int length);

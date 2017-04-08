@@ -247,7 +247,14 @@ void First::init()
         cycle_iteration = 0;
         cycle_sums = 0;
         iteration;
+	
+	sums = new int [1 << N];
 
+}
+
+void First::del()
+{
+	delete[] sums;
 }
 
 
@@ -255,7 +262,6 @@ void First::line(int * array, int length)
 {
 	N = length;
 	
-	sums = new int [1 << N];
 	iteration = N;
 	totalSums = 1 << N;
 
@@ -293,5 +299,4 @@ void First::line(int * array, int length)
 	printf("\n");
 	printf("\n");
 
-	delete[] sums;
 }

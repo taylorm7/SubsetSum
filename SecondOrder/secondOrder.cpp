@@ -24,25 +24,26 @@ void printMatrix(int ** mat, int length)
 }
 
 
-void nonDouble(int * array, int length)
+bool containsDouble(int * array, int length)
 {
 	
 	int * dest = new int[length];
 
 	std::copy(array, array + length, dest);
-	printArray(array, length);
-
-	int* end = array + length;
+	int* end = dest + length;
 	std::sort(dest, end);
-	//bool containsDuplicate = (std::unique(dest, end) != end);
-	bool containsDuplicate = true;
+	
+	bool containsDuplicate = (std::unique(dest, end) != end);
+
 	if(containsDuplicate)
 	{
-		cout << "double!" << endl;
+		cout << "double: ";
 		printArray(array, length);
 	}
 	
 	delete [] dest;
+	
+	return containsDuplicate;
 }
 
 void matrix(int * array, int length)
@@ -92,14 +93,21 @@ void matrix(int * array, int length)
         {
                 for (int j = 0; j < length; ++j)
                 {
-			//lineArray[j] = m[j][i];
-			if(i==j)
-				lineArray[j] = m[j][i];
+			lineArray[j] = m[j][i];
+			//if(i==j)
+				//lineArray[j] = m[j][i];
 		}
-		//f1.line(lineArray, length);
+		
+		cout << lineArray << " " << length << endl;
+		printArray(lineArray, length);
+		if( !containsDouble( lineArray, length) )
+		{
+			printArray(lineArray, length);
+			cout << lineArray << " " << length << endl;
+			f1.line(lineArray, length);
+		}
 	}
-	
-	nonDouble(lineArray, length);	
+
 	delete [] lineArray;
 
 	for (int i = 0; i < rows; ++i)
