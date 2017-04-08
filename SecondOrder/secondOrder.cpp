@@ -33,7 +33,11 @@ bool containsDouble(int * array, int length)
 	int* end = dest + length;
 	std::sort(dest, end);
 	
-	bool containsDuplicate = (std::unique(dest, end) != end);
+	int zeros = 0;
+	while(dest[zeros] == 0)
+		zeros++;
+	
+	bool containsDuplicate = (std::unique(dest + zeros, end) != end);
 
 	if(containsDuplicate)
 	{
@@ -85,27 +89,30 @@ void matrix(int * array, int length)
 
 
 	First f1(lineArray, length);
-	f1.init();
+	f1.init(length);
 
-	f1.line(array, length);
+	//f1.line(array, length);
 
         for (int i = 0; i < length; ++i)
         {
                 for (int j = 0; j < length; ++j)
                 {
 			lineArray[j] = m[j][i];
-			//if(i==j)
-				//lineArray[j] = m[j][i];
-		}
+			lineArray[j+1] = m[j][ (i+1)%length ];
+			if( j +1 == length)
+			{
+				f1.line(lineArray, length);
+			}
+			else if( !containsDouble( lineArray, length) )
+			{
+				f1.line(lineArray, length);
+			}
+			
+		}	
 		
-		cout << lineArray << " " << length << endl;
-		printArray(lineArray, length);
-		if( !containsDouble( lineArray, length) )
-		{
-			printArray(lineArray, length);
-			cout << lineArray << " " << length << endl;
-			f1.line(lineArray, length);
-		}
+		std::fill_n(lineArray, length+1, 0);
+		cout << endl;
+
 	}
 
 	delete [] lineArray;

@@ -233,7 +233,7 @@ void First::combinationUtil(int arr[], int data[], int start, int end,
  
 // Driver program to test above functions
 
-void First::init()
+void First::init(int size)
 {
 
         runningSums = 0;
@@ -248,7 +248,8 @@ void First::init()
         cycle_sums = 0;
         iteration;
 	
-	sums = new int [1 << N];
+	totalSums = 1 << size;
+	sums = new int [1 << size];
 
 }
 
@@ -263,7 +264,6 @@ void First::line(int * array, int length)
 	N = length;
 	
 	iteration = N;
-	totalSums = 1 << N;
 
 	//printf("N:%d sums length:%d\n", N, 2<<N);
 

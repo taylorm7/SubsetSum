@@ -29,7 +29,7 @@ class First
 	First(int * array, int length);
 
 	int getLength();
-	void init();
+	void init(int);
 	void del();
 	
 
