@@ -1,0 +1,264 @@
+N:1 sums length:4
+1 
+
+   Average Reached *** Cycles:1 Sums:1 
+N:1-1 Saved:1 Average:1.000000 
+
+Cycles:1 Cycle Iteration:1 
+
+
+N:2 sums length:8
+1 2 
+
+   Average Reached *** Cycles:1 Sums:2 
+N:2-1 Saved:3 Average:3.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:1 Cycle Iteration:1 
+
+
+N:3 sums length:16
+1 2 4 
+
+   Average Reached *** Cycles:1 Sums:3 
+N:3-1 Saved:6 Average:6.000000 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:2 Cycle Iteration:2 
+
+
+N:4 sums length:32
+1 2 4 8 
+
+   Average Reached *** Cycles:1 Sums:4 
+N:4-1 Saved:10 Average:10.000000 
+N:3-2 Saved:4 Average:2.000000 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:4 Cycle Iteration:4 
+
+
+N:5 sums length:64
+1 2 4 8 16 
+
+N:5-1 Saved:15 Average:15.000000 
+   Average Reached *** Cycles:2 Sums:9 
+N:4-3 Saved:10 Average:3.333333 
+N:3-3 Saved:5 Average:1.666667 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:8 Cycle Iteration:7 
+
+
+N:6 sums length:128
+1 2 4 8 16 32 
+
+N:6-1 Saved:21 Average:21.000000 
+   Average Reached *** Cycles:4 Sums:21 
+N:5-4 Saved:20 Average:5.000000 
+N:4-6 Saved:15 Average:2.500000 
+N:3-4 Saved:6 Average:1.500000 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:16 Cycle Iteration:14 
+
+
+N:7 sums length:256
+1 2 4 8 16 32 64 
+
+N:7-1 Saved:28 Average:28.000000 
+N:6-5 Saved:35 Average:7.000000 
+   Average Reached *** Cycles:7 Sums:42 
+N:5-10 Saved:35 Average:3.500000 
+N:4-10 Saved:21 Average:2.100000 
+N:3-5 Saved:7 Average:1.400000 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:32 Cycle Iteration:29 
+
+
+N:8 sums length:512
+1 2 4 8 16 32 64 128 
+
+N:8-1 Saved:36 Average:36.000000 
+N:7-6 Saved:56 Average:9.333333 
+   Average Reached *** Cycles:14 Sums:92 
+N:6-15 Saved:70 Average:4.666667 
+N:5-20 Saved:56 Average:2.800000 
+N:4-15 Saved:28 Average:1.866667 
+N:3-6 Saved:8 Average:1.333333 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:64 Cycle Iteration:53 
+
+
+N:9 sums length:1024
+1 2 4 8 16 32 64 128 256 
+
+N:9-1 Saved:45 Average:45.000000 
+N:8-7 Saved:84 Average:12.000000 
+N:7-21 Saved:126 Average:6.000000 
+   Average Reached *** Cycles:30 Sums:218 
+N:6-35 Saved:126 Average:3.600000 
+N:5-35 Saved:84 Average:2.400000 
+N:4-21 Saved:36 Average:1.714286 
+N:3-7 Saved:9 Average:1.285714 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:128 Cycle Iteration:112 
+
+
+N:10 sums length:2048
+1 2 4 8 16 32 64 128 256 512 
+
+N:10-1 Saved:55 Average:55.000000 
+N:9-8 Saved:120 Average:15.000000 
+N:8-28 Saved:210 Average:7.500000 
+   Average Reached *** Cycles:58 Sums:453 
+N:7-56 Saved:252 Average:4.500000 
+N:6-70 Saved:210 Average:3.000000 
+N:5-56 Saved:120 Average:2.142857 
+N:4-28 Saved:45 Average:1.607143 
+N:3-8 Saved:10 Average:1.250000 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:256 Cycle Iteration:208 
+
+
+N:11 sums length:4096
+1 2 4 8 16 32 64 128 256 512 1024 
+
+N:11-1 Saved:66 Average:66.000000 
+N:10-9 Saved:165 Average:18.333333 
+N:9-36 Saved:330 Average:9.166667 
+N:8-84 Saved:462 Average:5.500000 
+   Average Reached *** Cycles:131 Sums:1104 
+N:7-126 Saved:462 Average:3.666667 
+N:6-126 Saved:330 Average:2.619048 
+N:5-84 Saved:165 Average:1.964286 
+N:4-36 Saved:55 Average:1.527778 
+N:3-9 Saved:11 Average:1.222222 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:512 Cycle Iteration:445 
+
+
+N:12 sums length:8192
+1 2 4 8 16 32 64 128 256 512 1024 2048 
+
+N:12-1 Saved:78 Average:78.000000 
+N:11-10 Saved:220 Average:22.000000 
+N:10-45 Saved:495 Average:11.000000 
+N:9-120 Saved:792 Average:6.600000 
+   Average Reached *** Cycles:247 Sums:2220 
+N:8-210 Saved:924 Average:4.400000 
+N:7-252 Saved:792 Average:3.142857 
+N:6-210 Saved:495 Average:2.357143 
+N:5-120 Saved:220 Average:1.833333 
+N:4-45 Saved:66 Average:1.466667 
+N:3-10 Saved:12 Average:1.200000 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:1024 Cycle Iteration:821 
+
+
+N:13 sums length:16384
+1 2 4 8 16 32 64 128 256 512 1024 2048 4096 
+
+N:13-1 Saved:91 Average:91.000000 
+N:12-11 Saved:286 Average:26.000000 
+N:11-55 Saved:715 Average:13.000000 
+N:10-165 Saved:1287 Average:7.800000 
+N:9-330 Saved:1716 Average:5.200000 
+   Average Reached *** Cycles:563 Sums:5378 
+N:8-462 Saved:1716 Average:3.714286 
+N:7-462 Saved:1287 Average:2.785714 
+N:6-330 Saved:715 Average:2.166667 
+N:5-165 Saved:286 Average:1.733333 
+N:4-55 Saved:78 Average:1.418182 
+N:3-11 Saved:13 Average:1.181818 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:2048 Cycle Iteration:1755 
+
+
+N:14 sums length:32768
+1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 
+
+N:14-1 Saved:105 Average:105.000000 
+N:13-12 Saved:364 Average:30.333333 
+N:12-66 Saved:1001 Average:15.166667 
+N:11-220 Saved:2002 Average:9.100000 
+N:10-495 Saved:3003 Average:6.066667 
+   Average Reached *** Cycles:1047 Sums:10609 
+N:9-792 Saved:3432 Average:4.333333 
+N:8-924 Saved:3003 Average:3.250000 
+N:7-792 Saved:2002 Average:2.527778 
+N:6-495 Saved:1001 Average:2.022222 
+N:5-220 Saved:364 Average:1.654545 
+N:4-66 Saved:91 Average:1.378788 
+N:3-12 Saved:14 Average:1.166667 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:4096 Cycle Iteration:3289 
+
+
+N:15 sums length:65536
+1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 
+
+N:15-1 Saved:120 Average:120.000000 
+N:14-13 Saved:455 Average:35.000000 
+N:13-78 Saved:1365 Average:17.500000 
+N:12-286 Saved:3003 Average:10.500000 
+N:11-715 Saved:5005 Average:7.000000 
+N:10-1287 Saved:6435 Average:5.000000 
+   Average Reached *** Cycles:2381 Sums:25387 
+N:9-1716 Saved:6435 Average:3.750000 
+N:8-1716 Saved:5005 Average:2.916667 
+N:7-1287 Saved:3003 Average:2.333333 
+N:6-715 Saved:1365 Average:1.909091 
+N:5-286 Saved:455 Average:1.590909 
+N:4-78 Saved:105 Average:1.346154 
+N:3-13 Saved:15 Average:1.153846 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:8192 Cycle Iteration:6937 
+
+
+N:16 sums length:131072
+1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 
+
+N:16-1 Saved:136 Average:136.000000 
+N:15-14 Saved:560 Average:40.000000 
+N:14-91 Saved:1820 Average:20.000000 
+N:13-364 Saved:4368 Average:12.000000 
+N:12-1001 Saved:8008 Average:8.000000 
+N:11-2002 Saved:11440 Average:5.714286 
+   Average Reached *** Cycles:4398 Sums:49516 
+N:10-3003 Saved:12870 Average:4.285714 
+N:9-3432 Saved:11440 Average:3.333333 
+N:8-3003 Saved:8008 Average:2.666667 
+N:7-2002 Saved:4368 Average:2.181818 
+N:6-1001 Saved:1820 Average:1.818182 
+N:5-364 Saved:560 Average:1.538462 
+N:4-91 Saved:120 Average:1.318681 
+N:3-14 Saved:16 Average:1.142857 
+N:2-1 Saved:1 Average:1.000000 
+N:1-0 Saved:0 Average:-nan 
+
+Cycles:16384 Cycle Iteration:13059 
+
+
