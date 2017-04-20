@@ -41,8 +41,8 @@ bool containsDouble(int * array, int length)
 
 	if(containsDuplicate)
 	{
-		cout << "double: ";
-		printArray(array, length);
+		//cout << "double: ";
+		//printArray(array, length);
 	}
 	
 	delete [] dest;
@@ -101,18 +101,18 @@ void matrix(int * array, int length)
 			lineArray[j+1] = m[j][ (i+1)%length ];
 			if( j +1 == length)
 			{
+				printArray(lineArray, length);	
 				f1.line(lineArray, length);
 			}
 			else if( !containsDouble( lineArray, length) )
 			{
+				printArray(lineArray, length);	
 				f1.line(lineArray, length);
 			}
 			
 		}	
 		
 		std::fill_n(lineArray, length+1, 0);
-		cout << endl;
-
 	}
 
 	delete [] lineArray;

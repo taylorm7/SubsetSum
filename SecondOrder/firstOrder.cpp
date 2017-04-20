@@ -24,8 +24,8 @@ using namespace std;
 //#define printInSum
 //#define printFillSums
 //#define printRepeat
-#define printArrays
-#define printSavedSums
+//#define printArrays
+//#define printSavedSums
 //#define printCycles
 
 
@@ -39,26 +39,7 @@ int First::getLength()
 	return N;
 }
 
-/*
-int N;
 
-//int sums [1 << N];
-int * sums;
-//int totalSums = 1 << N;
-int totalSums;
-int runningSums = 0;
-int averageSums = 0;
-int savedPerN = 0;
-int perN = 0;
-
-bool reachedAverage = false;
-
-int cycle = 0;
-int cycle_iteration = 0;
-int cycle_sums = 0;
-//int iteration = N;
-int iteration;
-*/
 void printArray(int * array, int length)
 {
         int i;
@@ -73,7 +54,6 @@ void printArray(int * array, int length)
 void First::printArrayComma(int * array, int length)
 {
 	
-	//if(iteration + length > N)
 	if(iteration + length > N)
 	{
 		#ifdef printCycles
@@ -265,14 +245,6 @@ void First::line(int * array, int length)
 	
 	iteration = N;
 
-	//printf("N:%d sums length:%d\n", N, 2<<N);
-
-
-	//makeArray(arr);
-
-	//printArray(array,N);
-	//printf("\n");
-
 	int i=0;
 	//for(i = 0; i < N ; i+=1)
 	{	
@@ -290,13 +262,12 @@ void First::line(int * array, int length)
 	}
 	
 	//printf("\n");
-	
+	#ifdef printSavedSums	
 	printf("Cycles:%d Cycle Iteration:%d \n", cycle, cycle_iteration);
+	#endif
+
 	#ifdef printArrays
 	printArray(sums, totalSums);	
 	#endif
-
-	printf("\n");
-	printf("\n");
 
 }
