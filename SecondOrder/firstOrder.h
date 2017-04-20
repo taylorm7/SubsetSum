@@ -30,6 +30,7 @@ class First
 
 	int getLength();
 	void init(int);
+	void printSumArray();
 	void del();
 	
 

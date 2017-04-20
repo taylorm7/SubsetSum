@@ -238,6 +238,10 @@ void First::del()
 	delete[] sums;
 }
 
+void First::printSumArray()
+{
+	printArray(sums, totalSums);	
+}
 
 void First::line(int * array, int length)
 {

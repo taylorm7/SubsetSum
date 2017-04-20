@@ -114,6 +114,9 @@ void matrix(int * array, int length)
 		
 		std::fill_n(lineArray, length+1, 0);
 	}
+	
+	f1.printSumArray();
+	cout << endl;
 
 	delete [] lineArray;
 
