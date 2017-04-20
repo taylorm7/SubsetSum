@@ -91,8 +91,6 @@ void matrix(int * array, int length)
 	First f1(lineArray, length);
 	f1.init(length);
 
-	//f1.line(array, length);
-
         for (int i = 0; i < length; ++i)
         {
                 for (int j = 0; j < length; ++j)
