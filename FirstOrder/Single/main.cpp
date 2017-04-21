@@ -5,10 +5,9 @@
 
 //#define N 10
 
-//#define printInSum
 //#define printFillSums
 //#define printRepeat
-//#define printArrays
+#define printArrays
 #define printSavedSums
 //#define printCycles
 
@@ -54,15 +53,16 @@ void printArrayComma(int * array, int length)
 
 		cycle_iteration++;
 		iteration = length;
-		#ifdef printArrays
-		printf("\n");
-		#endif
-
+		
 	}
 	else
 	{
 		iteration = iteration + length;
 	}
+	#ifdef printArrays
+		printf("\n");
+	#endif
+
 	cycle++;               	
 	cycle_sums += length;
 
@@ -89,13 +89,13 @@ int inSums(int t)
 	{
 		if(t == sums[i])
 		{
-			#ifdef printInSum
+			#ifdef printFillSums
 			printf(" in sums\n");
 			#endif
 			return 0;
 		}
 	}
-	#ifdef printInSum
+	#ifdef printFillSums
 	printf(" added\n");
 	#endif
 	sums[runningSums++] = t;
@@ -106,7 +106,11 @@ int fillSums(int * a, int length)
 {
 	int i = 0;
 	int j = 0;
+	int k = 0;
+
 	int newSum = 0;
+
+
 	for(i ; i < length; i++)
 	{
 		int sum = 0;
@@ -179,7 +183,7 @@ void combinationUtil(int arr[], int data[], int start, int end,
 	
 		if(averageSums >= (totalSums / 2) && !reachedAverage)
 		{
-			printf("   Average Reached *** Cycles:%d Sums:%d \n", cycle_iteration, cycle_sums); 
+			printf("   Average Reached *** Cycles:%d Sums:%d", cycle_iteration, cycle_sums); 
 			reachedAverage = true;
 		}
 		#endif

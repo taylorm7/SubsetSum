@@ -21,7 +21,6 @@ using namespace std;
 
 //#define N 10
 
-//#define printInSum
 //#define printFillSums
 //#define printRepeat
 //#define printArrays
@@ -71,6 +70,10 @@ void First::printArrayComma(int * array, int length)
 	{
 		iteration = iteration + length;
 	}
+	#ifdef printArrays
+	printf("\n");
+	#endif
+
 	cycle++;               	
 	cycle_sums += length;
 
@@ -97,13 +100,13 @@ int First::inSums(int t)
 	{
 		if(t == sums[i])
 		{
-			#ifdef printInSum
+			#ifdef printFillSums
 			printf(" in sums\n");
 			#endif
 			return 0;
 		}
 	}
-	#ifdef printInSum
+	#ifdef printFillSums
 	printf(" added\n");
 	#endif
 	sums[runningSums++] = t;

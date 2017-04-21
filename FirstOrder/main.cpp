@@ -5,7 +5,6 @@
 
 //#define N 10
 
-//#define printInSum
 //#define printFillSums
 //#define printRepeat
 #define printArrays
@@ -54,15 +53,16 @@ void printArrayComma(int * array, int length)
 
 		cycle_iteration++;
 		iteration = length;
-		#ifdef printArrays
-		printf("\n");
-		#endif
-
+		
 	}
 	else
 	{
 		iteration = iteration + length;
 	}
+	#ifdef printArrays
+	printf("\n");
+	#endif
+
 	cycle++;               	
 	cycle_sums += length;
 
@@ -89,13 +89,13 @@ int inSums(int t)
 	{
 		if(t == sums[i])
 		{
-			#ifdef printInSum
+			#ifdef printFillSums
 			printf(" in sums\n");
 			#endif
 			return 0;
 		}
 	}
-	#ifdef printInSum
+	#ifdef printFillSums
 	printf(" added\n");
 	#endif
 	sums[runningSums++] = t;
